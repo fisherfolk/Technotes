@@ -1,0 +1,12 @@
+---
+layout: default
+title: Eclipse
+---
+<h1>{{ page.title }}</h1>
+<p>This is my first post.Click the link below to go back to index:</p>
+{% for post in site.posts %}
+	{% if post.title contains 'Eclipse-' %}
+       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endif %}
+{% endfor %}
+<a href="{{ site.baseurl }}/index.html">Go back</a>
